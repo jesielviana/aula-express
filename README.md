@@ -1,5 +1,7 @@
 # Projeto Web com Backend em Express e Frontend com Vanilla JS
 
+> Para uma melhor organização do código fonte, eu criei dois sub diretórios dentro do diretório principal. Um diretório pra o código da API com Node/Express chamada de "backend" e outro diretório para o código HTML, CSS e JS da interface gráfica, chamado de "frontend".
+
 ### Como testar este app?
 
 1. Clone o reposiório: `git clone https://github.com/jesielviana/aula-express.git`
