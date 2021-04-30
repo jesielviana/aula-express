@@ -10,6 +10,7 @@ class CursoService {
 
   async adicionar (cursoDTO) {
     // verifica se já existe curso com o mesmo nome
+    console.log('cursoDTO', cursoDTO)
     const curso = await this.curso.findOne({
       where: {
         nome: cursoDTO.nome
