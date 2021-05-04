@@ -10,3 +10,12 @@
 1. Configure os dados de conexão do Postgres no arquivo `aula-express/config/database.js`
 1. Inicie o servidor de backend: `yarn start`
 1. Abra o arquivo `frontend/index.html` no seu navegador
+
+
+### Atividade
+1. (Obrigatório) Implementar a consulta e adição de estudantes, estudante tem os seguintes campos: `nome, email e matricula`;
+1. (Opcional) Implementar o CRUD completo de `curso` e `estudante`: salvar, consultar, alterar e remover.
+1. (Opcional) Implementar o relacionamento entre `curso` e `estudante`, um curso pode ter vários estudantes e cada estudante só pode fazer um curso.
+
+
+Dúvidas? jesiel@ifpi.edu.br

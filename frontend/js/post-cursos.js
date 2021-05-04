@@ -38,7 +38,8 @@ async function enviarDadosParaAPI (curso) {
       limparCampos()
       window.location.href = 'index.html'
     } else {
-      console.log('Erro ao adicionar curso')
+      const msg = await resposta.json()
+      console.log('Erro ao adicionar curso', msg)
     }
   } catch (erro) {
     console.error(erro)

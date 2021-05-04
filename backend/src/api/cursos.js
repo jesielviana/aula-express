@@ -25,9 +25,10 @@ router.post('/',
     const { nome, ch } = req.body
     try {
       await cursoService.adicionar({ nome, ch })
-      res.status(201).send('Curso adicionado com sucesso!')
+      res.status(201).json({ message: 'Curso adicionado com sucesso!' })
     } catch (erro) {
-      res.status(400).send(erro.message)
+      console.log('erro.message', erro.message)
+      res.status(400).send({ message: erro.message })
     }
   })
 
