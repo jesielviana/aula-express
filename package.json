@@ -2,6 +2,7 @@
   "name": "aula-express",
   "version": "1.0.0",
   "scripts": {
+    "build": "npm install && npx prisma generate",
     "start": "node app.js"
   },
   "type": "module",
