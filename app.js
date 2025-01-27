@@ -1,5 +1,7 @@
 import Express from 'express';
 import logger from './middlewares/logger.js';
+import verifyToken from './middlewares/verifyToken.js';
+import authRouter from './router/auth.js';
 import userRouter from './router/users.js';
 
 const app = Express()
@@ -10,6 +12,9 @@ app.get('/', (req, res) => {
 })
 
 app.use(logger)
+app.use(authRouter)
+
+app.use(verifyToken)
 app.use(userRouter)
 
 const PORT = process.env.PORT || 3000
