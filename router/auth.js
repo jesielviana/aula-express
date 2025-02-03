@@ -28,7 +28,7 @@ authRouter.post('/login', async (req, res) => {
   const passwordIsValid = bcrypt.compareSync(password, user.password)
 
   if (passwordIsValid) {
-    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '60' })
+    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1d' })
     delete user.password
     res.send({
       user,
@@ -41,7 +41,7 @@ authRouter.post('/login', async (req, res) => {
 })
 
 
-authRouter.post('/signup', async (req, res) => {
+authRouter.post('/register', async (req, res) => {
   const user = req.body
   const salt = bcrypt.genSaltSync(saltRounds);
   const hash = bcrypt.hashSync(req.body.password, salt);

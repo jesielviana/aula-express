@@ -1,3 +1,4 @@
+import cors from 'cors';
 import Express from 'express';
 import logger from './middlewares/logger.js';
 import verifyToken from './middlewares/verifyToken.js';
@@ -6,6 +7,9 @@ import userRouter from './router/users.js';
 
 const app = Express()
 app.use(Express.json())
+app.use(cors({
+  origin: '*'
+}));
 
 app.get('/', (req, res) => {
   res.send("App online!")
